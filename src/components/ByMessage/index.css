@@ -1,0 +1,111 @@
+.by-message-root{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    color: rgba(0,0,0,.65);
+    font-size: 14px;
+    position: fixed;
+    top: 8px;
+    left: 0;
+    z-index: 1010;
+    width: 100%;
+    pointer-events: none;
+}
+.by-message-wrap{
+    position: relative;
+    width: 90%;
+    margin:12px auto;
+    text-align: center;
+}
+.by-message-active{
+    animation: topIn 0.2s  cubic-bezier(.165, .84, .44, 1) forwards;
+}
+.by-message-hide{
+    animation: topOut 0.6s  linear  forwards;
+}
+.by-message {
+    text-align: center;
+    min-width: 200px;
+    transition: all 2s;
+    /* border-radius: 5px; */
+    background-color: #fff;
+    padding: 6px 12px;
+    font-size: 14px;
+    text-align: center;
+    display: inline-flex;
+    justify-content: flex-start;
+    align-items: center;
+    /* border: 1px solid; */
+    font-size: 14px;
+    color: rgba(0,0,0,.65);
+    box-shadow: 0 2px 8px #f0f1f2;
+}
+
+
+/* message-ionic */
+.by-message .by-message-ionic{
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    margin-right: 10px;
+    color: #fff;
+    font-size: 12px;
+    font-weight: bold;
+    line-height: 15px;
+}
+
+.by-message.message-info .by-message-ionic{
+    background: #1890ff;
+    font-style: italic;
+}
+.by-message.message-success .by-message-ionic{
+   
+    background-color: #52c41a;
+}
+.by-message.message-error .by-message-ionic{
+    background: #ff4d4f;
+    line-height: 14px;
+}
+.by-message.message-warning .by-message-ionic{
+    background: #faad14;
+}
+.by-message .by-message-text{
+    position: relative;
+    top: -1px;
+}
+
+.by-message-loading{
+    border-right: 2px solid #1890ff;
+    box-shadow: 5px 0px 5px -5px #fff;
+    animation: byMessageLoading 1s linear infinite;
+}
+@keyframes byMessageLoading {
+    0%{
+        transform: rotate(0deg);
+    }
+    100%{
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes topIn{
+    0%{
+        transform: translateY(-30px);
+        opacity: 0;
+    }
+    100%{
+        transform: translateY(0px);
+        opacity: 1;
+
+    }
+}
+@keyframes topOut{
+    0%{
+        transform: translateY(20px);
+        opacity: 1;
+    }
+    100%{
+        transform: translateY(-30px);
+    }
+}

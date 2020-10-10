@@ -1,0 +1,64 @@
+.by-treen-main{
+    display: block;
+    color: rgba(255,255,255,.65);
+    background: #001529;
+}
+.by-treen-itme{
+    transition: all 0.3s linear;
+    padding:0 12px 0px 16px;
+    height: 40px;
+    line-height: 40px;
+    position: relative;
+    cursor: pointer;
+}
+.by-treen-itme:hover{
+    background-color:#1890ff;
+
+}
+
+.by-treen-block:hover .by-treen-children{
+    background-color:rgba(0,0,0,.65);
+}
+
+.by-treen-itme.by-select-active{
+    color: #fff;
+}
+
+.by-treen-itme.active,
+.by-treen-itme.active *{
+    background-color:#1890ff;
+    color: #fff;
+  
+}
+.by-treen-itme.active.by-treen-parent,
+.by-treen-itme.active.by-treen-parent *{
+    background-color:rgba(0,0,0,.65);
+}
+
+.by-treen-itme.active+.by-treen-children,
+.by-treen-itme.active .by-treen-children{
+    background-color:#000c17;
+}
+
+.ionic-triangle{
+    width: 0;
+    height: 0;
+    border-width: 0 10px 6px;
+    border-style: solid;
+    position: absolute;
+    z-index: 99999;
+    top: 50%;
+    margin-top: -5px;
+    right: 16px;
+    transition: all 0.5s linear;
+   
+}
+.ionic-triangle.ionic-triangle-up{
+    border-width: 0 10px 6px;
+    border-color: transparent transparent #b1c2df;
+} 
+ .ionic-triangle.ionic-triangle-down{
+    border-width:6px 10px 0;
+    border-color:#b1c2df transparent transparent;/*灰 透明 透明 */
+    
+}

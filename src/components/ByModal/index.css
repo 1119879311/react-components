@@ -1,0 +1,201 @@
+
+.by-modal-mask{
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 1000;
+    height: 100%;
+    background-color: rgba(0,0,0,.45);
+}
+
+.by-modal-warp,.by-modal{
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 1000;
+    overflow: auto;
+    outline: 0;
+}
+.by-modal-main{
+    box-sizing: border-box;
+    padding: 0;
+    color: rgba(0,0,0,.65);
+    font-size: 14px;
+    font-variant: tabular-nums;
+    line-height: 1.5715;
+    list-style: none;
+    -webkit-font-feature-settings: 'tnum';
+    font-feature-settings: 'tnum';
+    position: relative;
+    top: 100px;
+    margin: 0 auto;
+    width: 520px;
+    background-color: #fff;
+}
+
+.by-modal-main-header{
+    padding: 16px 24px;
+    color: rgba(0,0,0,.65);
+    background: #fff;
+    border-bottom: 1px solid #f0f0f0;
+    border-radius: 2px 2px 0 0;
+    display: flex;
+}
+.by-modal-main-content{
+    padding: 24px;
+    font-size: 14px;
+    line-height: 1.5715;
+}
+.by-modal-main-footer{
+    padding: 10px 16px;
+    text-align: right;
+    background: 0 0;
+    border-top: 1px solid #f0f0f0;
+    border-radius: 0 0 2px 2px;
+}
+.by-modal-main-footer button+button {
+    margin-bottom: 0;
+    margin-left: 8px;
+}
+
+.by-modal-close-x{
+    position: absolute;
+    display: block;
+    width: 56px;
+    height: 56px;
+    right: 0;
+    top: 0;
+    line-height: 56px;
+    text-align: center;
+    font-size: 28px;
+    color: rgba(0,0,0,.45);
+    transition: color 0.2s linear;
+    cursor: pointer;
+}
+.by-modal-close-x:hover{
+    color: rgba(0,0,0,.8);  
+}
+.by-modal-active{
+    transform: scale(1);
+    opacity: 1;
+    transition: all 0.2s linear;
+    animation: unfoldIn 0.2s  cubic-bezier(.165, .84, .44, 1) ;
+    /* animation: unfoldIn 0.2s  cubic-bezier(.165, .84, .44, 1) forwards; */
+}
+.by-modal-hidden{
+    transform: scale(0);
+    opacity: 0;
+    transition: all 0.2s linear;
+    /* animation: unfoldOut 0.2s cubic-bezier(.165, .84, .44, 1) */
+}
+@keyframes unfoldIn {
+    0% {
+        opacity: 0;
+        transform: scale(0)
+    }
+
+    100% {
+        opacity: 1;
+        transform: scale(1)
+    }
+}
+@keyframes unfoldOut {
+    0% {
+        opacity: 1;
+        transform: scale(1)
+    }
+    100% {
+        opacity: 0;
+        transform: scale(0)
+    }
+}
+
+/* 图标 info error success warning */
+/* by-title-${type}-ioc */
+.by-modal .by-title-ioc{
+    display: inline-block;
+    width: 22px;
+    height: 22px;
+    border-radius: 50%;
+    font-size: 16px;
+    line-height: 16px;
+    margin-right: 8px;
+    text-align: center;
+    font-weight: 600;
+    border:2px solid transparent
+}
+.by-modal .by-title-info-ioc{ 
+    border-color:  #1890ff;
+    color: #1890ff;
+}
+.by-modal .by-title-success-ioc{ 
+    border-color:  #52c41a;
+    color: #52c41a;
+}
+.by-modal .by-title-error-ioc{ 
+    border-color:  #ff4d4f;
+    color: #ff4d4f;
+    font-weight: bold;
+    line-height: 13px;
+}
+.by-modal .by-title-warning-ioc{ 
+    border-color:  #faad14;
+    color: #faad14;
+}
+/* button */
+.by-button{
+    line-height: 1.5715;
+    position: relative;
+    display: inline-block;
+    font-weight: 400;
+    white-space: nowrap;
+    text-align: center;
+    background-image: none;
+    border: 1px solid transparent;
+    box-shadow: 0 2px 0 rgba(0,0,0,.015);
+    transition: all .3s cubic-bezier(.645,.045,.355,1);
+    height: 32px;
+    padding: 4px 15px;
+    font-size: 14px;
+    border-radius: 2px;
+    color: rgba(0,0,0,.65);
+    background: #fff;
+    border-color: #d9d9d9;
+    cursor: pointer;
+
+}
+.by-button.by-button-block{
+    display: block;
+}
+.by-button, .by-button:active, .by-button:focus {
+    outline: 0;
+}
+.by-button:hover{
+    color: #1890ff;
+    border-color: #1890ff;
+}
+
+/*尺寸 */
+.by-button.by-button-lager{
+    height: 40px;
+    padding: 4px 20px;
+}
+.by-button.by-button-small{
+    height: 24px;
+    padding: 4px 15px;
+}
+
+/* 主题 */
+.by-button-primary{
+    background-color: #1890ff;
+    border-color: #1890ff;
+    color: #fff;
+}
+.by-button-primary:hover{
+    background-color: #48a2f7;
+    color: #fff;
+}

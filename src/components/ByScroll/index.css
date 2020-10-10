@@ -1,0 +1,38 @@
+.by-scroll-warp{
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    cursor: pointer;
+}
+@keyframes scrolltop {
+    0%{
+        transform: translate3d(0, 0, 0);
+    }
+    100%{
+        transform: translate3d(0, -50%, 0);
+    }
+}
+@keyframes scrollbottom {
+    0%{
+        transform: translate3d(0, -50%, 0);
+    }
+    100%{
+        transform: translate3d(0, 0%, 0);
+    }
+}
+@keyframes scrollleft {
+    0%{
+        transform: translate3d(0, 0, 0);
+    }
+    100%{
+        transform: translate3d(-50%, 0, 0);
+    }
+}
+@keyframes scrollright {
+    0%{
+        transform: translate3d(-50%, 0, 0);
+    }
+    100%{
+        transform: translate3d(0%, 0, 0);
+    }
+}

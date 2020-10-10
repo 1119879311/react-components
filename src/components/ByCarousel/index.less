@@ -1,0 +1,64 @@
+.by-carousel-warp{
+    position: relative;
+    display: block;
+}
+.by-carousel-main{
+   position: relative;
+   overflow: hidden;
+}
+.by-carousel-list{
+    transform: translate3d(0,0,0);
+}
+.by-carousel-itme{
+    float: left;
+    height: 100%;
+   
+}
+
+// 指示点
+.by-carousel-dots{
+   position: absolute;
+   bottom: 12px;
+   right: 0;
+   left: 0;
+   display: flex;
+   justify-content: center;
+}
+.by-carousel-dots li{
+    width: 16px;
+    height: 4px;
+    background-color: #fff;
+    margin: 0 4px;
+    cursor: pointer;
+}
+.by-carousel-dots li.active,
+.by-carousel-dots li:hover
+{
+    background-color: #1890ff;
+}
+
+//指示点方向
+.by-carousel-top .by-carousel-dots{
+    bottom: auto;
+    top: 12px;
+}
+.by-carousel-left .by-carousel-dots,
+.by-carousel-right .by-carousel-dots{
+    top: 50%;
+    height: auto;
+    transform: translate(0, -50%);
+    left: 12px;
+    right: auto;
+    bottom: auto;
+    flex-direction: column;
+}
+.by-carousel-left .by-carousel-dots li,
+.by-carousel-right .by-carousel-dots li{
+    width: 4px;
+    height: 16px;
+    margin: 4px 2px;
+}
+.by-carousel-right .by-carousel-dots{
+    left: auto;
+    right: 12px;
+}

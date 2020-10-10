@@ -1,0 +1,106 @@
+/* button */
+.by-btn{
+    line-height: 1.5715;
+    position: relative;
+    display: inline-block;
+    font-weight: 400;
+    white-space: nowrap;
+    text-align: center;
+    background-image: none;
+    border: 1px solid transparent;
+    box-shadow: 0 2px 0 rgba(0,0,0,.015);
+    transition: all .3s cubic-bezier(.645,.045,.355,1);
+    height: 32px;
+    padding: 0px 15px 4px;
+    font-size: 14px;
+    border-radius: 2px;
+    color: rgba(0,0,0,.65);
+    background: #fff;
+    border-color: #d9d9d9;
+    cursor: pointer;
+
+}
+.by-btn.by-btn-block{
+   width: 100%;
+}
+.by-btn, .by-btn:active, .by-btn:focus {
+    outline: 0;
+}
+.by-btn:hover{
+    color: #1890ff;
+    border-color: #1890ff;
+}
+
+/* 圆角 */
+.by-btn.by-btn-round{
+    border-radius:12px;
+}
+
+/*尺寸 */
+.by-btn.by-btn-lager{
+    height: 36px;
+    padding: 0px 16px 4px;
+}
+.by-btn.by-btn-small{
+    height: 24px;
+    padding: 0px 12px 4px;
+    line-height: 0;
+}
+
+/* 主题 */
+/* 主要的 */
+.by-btn.by-btn-primary{
+    background-color: #1890ff;
+    border-color: #1890ff;
+    color: #fff;
+}
+.by-btn.by-btn-primary:hover{
+    background-color: #48a2f7;
+    color: #fff;
+}
+
+/* 成功的 */
+.by-btn.by-btn-success{
+    background-color: #67c23a;
+    border-color: #67c23a;
+    color: #fff;
+}
+.by-btn.by-btn-success:hover{
+    background-color: #85ce61;
+    color: #fff;
+}
+
+/* 危险 */
+.by-btn.by-btn-danger{
+    background-color: #ff4d4f;
+    border-color: #ff4d4f;
+    color: #fff;
+}
+.by-btn.by-btn-danger:hover{
+    background-color: #f47d7e;
+    color: #fff;
+}
+/* 警告 */
+
+.by-btn.by-btn-warning{
+    background-color: #e6a23c;
+    border-color: #e6a23c;
+    color: #fff;
+}
+.by-btn.by-btn-warning:hover{
+    background-color: #ebb563;
+    color: #fff;
+}
+/* 禁止状态 */
+.by-btn.by-btn-disabled{
+    color: rgba(0,0,0,.25);
+    background-color: #f5f5f5;
+    border-color: #d9d9d9;
+    cursor: not-allowed;
+}
+.by-btn.by-btn-disabled:hover{
+    color: rgba(0,0,0,.4);
+    background-color: #d9d9d9;
+    border-color: #d9d9d9;
+    cursor: not-allowed;
+}

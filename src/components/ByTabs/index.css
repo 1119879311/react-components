@@ -1,0 +1,68 @@
+.by-tabs-warp,
+.by-tabs-nav-warp,
+.by-tabs-content-warp{
+    width: 100%;
+    position: relative;
+    height: auto;
+}
+.by-tabs-nav-warp{
+    white-space: nowrap;
+    overflow: hidden;
+    border-bottom: 1px solid #f0f0f0;
+}
+.by-tabs-nav-list{
+    position: relative;
+    display:inline-flex;
+    flex-wrap: nowrap;
+    transition:transform  0.3s;
+    transform: translate(0px, 0px) ;
+}
+.by-tabs-nav-itme{
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    margin: 0 32px 0 0;
+    padding: 12px 0;
+    font-size: 14px;
+    background: 0 0;
+    border: 0;
+    outline: none;
+    cursor: pointer;
+    transition: all 0.2s;
+} 
+.by-tabs-nav-itme.active,
+.by-tabs-nav-itme:hover{
+    color:#1890ff ;
+}
+
+.by-tabs-nav-line{
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 43px;
+    height: 2px;
+    background: #1890ff;
+    pointer-events: none;
+    transition: left 0.4s;    
+}
+.by-tabs-content{
+    transition: all 0.3s;
+}
+.by-tabs-content-itme{
+    display: none;
+    transition: all 0.3s;
+}
+.by-tabs-content-itme.active{
+    display: block;
+}
+/* 关闭按钮 */
+.by-tabs-itme-close{
+    padding-left: 4px;
+    font-size: 20px;
+    color: rgb(190, 188, 188);
+    transition: all 0.2s;
+    line-height: 2px;
+}
+.by-tabs-itme-close:hover{
+    color: #666;
+}

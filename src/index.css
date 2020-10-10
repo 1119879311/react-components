@@ -1,0 +1,239 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+a{
+  text-decoration: none;
+}
+ul li ,ol li {
+  list-style: none;
+}
+input,button,select,textarea{outline: none;}
+
+.by-zhanwei{
+  height: 46px;
+}
+.text-center{
+  text-align: center;
+}
+input:focus,button:focus,select:focus{
+  outline: none;
+}
+.by-input{
+  padding: 6px 8px;
+  transition: all 0.3s linear;
+  border:1px solid #eee;
+  border-radius: 4px;
+  outline: none;
+  width: 250px;
+  position: relative;
+  font-size: 14px;
+}
+
+.by-input:focus{
+  outline: none;
+  /* transition: all 0.3s linear;
+  box-shadow: 0 0 4px #409EFF;
+  border:1px solid #409EFF; */
+}
+.by-button{
+  color: #323233;
+  background-color: #fff;
+  border: 1px solid #ebedf0;
+  min-width: 60px;
+  height: 30px;
+  padding: 0 8px;
+  font-size: 14px;
+  line-height: 28px;
+  transition: all 0.3s linear;
+}
+.by-button:focus{
+  outline: none;
+}
+.by-button:disabled {
+  background: #eaeaea;
+  color: #6a6868;
+  border: 1px solid #cecece;
+  cursor: not-allowed;
+}
+
+.by-button.by-block{
+  display: block;
+  width: 80%;
+  border-radius: 20px;
+  background: #0471FD;
+  color: #fff;
+  margin: 20px auto;
+  height: 40px;
+  line-height: 40px;
+}
+
+.by-flex{
+  display: flex;
+  align-items: center;
+}
+.by-flex>.by-flex-auto{
+  flex: 1;
+  margin: 0 2px;
+}
+
+.by-tabs-main{
+  display: flex;
+  width: 100%;
+  background: #fff;
+  font-size: 14px;
+}
+.by-tab{
+  position: relative;
+  flex: 1;
+  min-width: 0;
+  padding: 0 2px;
+  text-align: center;
+  height: 40px;
+  line-height: 40px;
+}
+.by-tab a{
+  color: #646566;
+  display: inline-block;
+  border-bottom: 2px solid transparent;
+  padding: 0 12px;
+  font-size: 16px;
+}
+.by-tab.active a{
+  color: #323233;
+  height: 100%;
+  border-bottom: 2px solid #1989fa;
+ 
+}
+
+.by-icon-push{
+  transform: rotate(45deg);
+}
+
+/* // by-flex-itme */
+.by-flex-itme{
+  display:flex;
+  align-items: center;
+}
+.by-flex-itme .by-flex-label{
+  width: 90px;
+}
+.by-flex-itme .by-flex-content{
+  display:flex;
+  flex-wrap: wrap;
+  flex: 1;
+}
+
+/* //  */
+.link-btn{
+  font-size: 14px;
+  height: 25px;
+  line-height: 25px;
+  padding: 0 6px;
+  color: #fff;
+  background-color: #108ee9;
+  border: 1px solid #108ee9;
+  border-radius: 4px;
+  display: block;
+  text-align: center;
+}
+
+.am-list .am-list-item .am-list-line .am-list-content,
+.am-list .am-list-item .am-list-line .am-input-label,
+.am-list .am-list-item .am-input-control input,
+.am-list .am-list-item select,
+.am-list .am-textarea-label,
+.am-list .am-textarea-control textarea{
+  font-size: 14px;
+  color: #3f3f3f;
+ 
+ 
+}
+.am-list .am-list-item select{
+  appearance: menulist;
+}
+.am-list .am-list-item .am-list-line .am-list-extra{
+  font-size: 14px;
+}
+
+/* // 分页 */
+.am-pagination{
+  width: 80%;
+  margin: 10px auto;
+}
+.am-pagination .am-button{
+  height: 30px;
+  line-height: 30px;
+  font-size: 14px;
+}
+.am-pagination .am-pagination-wrap{
+  font-size: 14px;
+}
+.am-modal-input-container{
+  width: 99%;
+  margin-bottom: 4px;
+}
+
+.am-navbar{
+  position: fixed;
+  width: 100%;
+  top: -1px;
+  z-index: 10;
+
+}
+
+.am-modal-wrap  .am-modal-transparent{
+  width: 300px;
+}
+
+
+.number-barrier-page .am-tabs-tab-bar-wrap{
+  bottom: auto;
+  position: relative;
+}
+
+/* // 单选 */
+/* .by-radio {
+  margin-left: 12px;
+}
+.by-radio .am-radio {
+  padding: 5px;
+  border: 1px solid #ccc;
+  border-radius: 50%;
+  margin-right: 5px;
+  width: 20px;
+  height: 20px;
+}
+.by-radio .am-radio-inner{
+  width: 12px;
+  height: 12px;
+  top: 4px;
+}
+.by-radio .am-radio-inner::after{
+  width: 6px;
+  height: 10px;
+}
+
+.by-radio .am-radio-checked{
+  background-color: #108ee9;
+  border-color: #108ee9;
+
+}
+.by-radio .am-radio.am-radio-checked .am-radio-inner:after{
+  border-color: #fff;
+} */
+
