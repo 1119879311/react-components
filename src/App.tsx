@@ -1,5 +1,4 @@
 import React,{Component, Suspense} from 'react';
-import "./utils/utils"
 import RotuerCpt from "./router"
 
 class App extends Component<{}>{

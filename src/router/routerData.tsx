@@ -8,21 +8,10 @@ export type IDataRouter = {
 } 
 export default [
     {
-        path: "/login",
-        title: "登录",
-        exact: true,
-        component: React.lazy(() => import("@/pages/login/login"))
-    },
-    {
         path: "/",
         title: "组件",
         component: React.lazy(() => import("@/pages/layout")),
-        childrens: [{
-                path: "/",
-                title: "简介",
-                exact: true,
-                component: React.lazy(() => import("@/pages/home"))
-            },
+        childrens: [
             {
                 path: "/button",
                 title: "button",

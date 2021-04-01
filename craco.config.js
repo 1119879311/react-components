@@ -1,6 +1,5 @@
 const cracoLess = require("craco-less")
 const path = require("path")
-const px2rem = require("postcss-px2rem")
 const addPath = dir => path.join(__dirname,dir);
 
 module.exports = {
