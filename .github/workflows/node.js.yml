@@ -39,4 +39,3 @@ jobs:
           REMOTE_USER: ${{ secrets.REMOTE_USER_LUN }}
           REMOTE_PORT: ${{ secrets.REMOTE_PORT_LUN}}
           TARGET: ${{ secrets.REMOTE_TARGET_LUN }}
-          AFTER_COMMAND: "ls -l"
