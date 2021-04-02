@@ -29,14 +29,13 @@ jobs:
         node-version: ${{ matrix.node-version }}
     - run: npm ci
     - run: npm run build --if-present
-    - name: Deploy to Server
-      uses: easingthemes/ssh-deploy@v2.1.5
-      env:
-          SSH_PRIVATE_KEY: ${{ secrets.SSH_PRIVATE_KEY }}
-          ARGS: "-rltgoDzvO --delete"
-          SOURCE: "build/"
-          REMOTE_HOST: ${{ secrets.REMOTE_HOST_LUN }}
-          REMOTE_USER: ${{ secrets.REMOTE_USER_LUN }}
-          REMOTE_PORT: ${{ secrets.REMOTE_PORT_LUN}}
-          TARGET: ${{ secrets.REMOTE_TARGET_LUN }}
+    - name: Deploy
+      uses: appleboy/ssh-action@master # 使用ssh链接服务器
+      with:
+        host: ${{ secrets.REMOTE_HOST_LUN }}
+        username: ${{ secrets.REMOTE_USER_LUN }}
+        password: ${{ secrets.REMOTE_PASSWORD_LUN }}
+        port: ${{ secrets.REMOTE_PORT_LUN }}
+        script: ls -l
+
     
