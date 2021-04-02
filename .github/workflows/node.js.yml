@@ -30,12 +30,10 @@ jobs:
     - run: npm ci
     - run: npm run build --if-present
     - name: Deploy to Server
-      uses: easingthemes/ssh-deploy@v2.1.5
-      env:
-          SSH_PRIVATE_KEY: ${{ secrets.SSH_PRIVATE_KEY }}
-          ARGS: "-rltgoDzvO --delete"
-          SOURCE: "build"
-          REMOTE_HOST: ${{ secrets.REMOTE_HOST_LUN }}
-          REMOTE_USER: ${{ secrets.REMOTE_USER_LUN }}
-          REMOTE_PORT: ${{ secrets.REMOTE_PORT_LUN}}
-          TARGET: ${{ secrets.REMOTE_TARGET_LUN }}
+      uses: wlixcc/SFTP-Deploy-Action@v1.0 
+      with:  
+          username: ${{ secrets.REMOTE_USER_LUN }}   #ssh user name
+          server: ${{ secrets.REMOTE_HOST_LUN }} #引用之前创建好的secret
+          ssh_private_key: ${{ secrets.SSH_PRIVATE_KEY }} #引用之前创建好的secret
+          local_path: './build/*'  # 对应我们项目build的文件夹路径
+          remote_path: ${{ secrets.REMOTE_TARGET_LUN }}
